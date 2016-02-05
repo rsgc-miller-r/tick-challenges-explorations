@@ -50,6 +50,71 @@ studentRandom
 
 //find highest # in random #s
 
-for (foo, value) in studentRandom.enumerate {
-    print("the index value is: \(foo) and the value is \(value)")
+var hvsf = -1
+
+var hvindex = -1
+
+for (index, value) in studentRandom.enumerate() {
+    
+    print("The index is \(index) and the val is \(value)")
+    
+    if value > hvsf {
+        hvsf = value
+        hvindex = index
+    }
+    
 }
+
+hvsf
+hvindex
+
+
+/*
+basic algorythymHEAVEN WOOOOOO
+repeat loop till unsorted list is empty
+ - scan values in unsorted list, find highest
+ - add highest to new lsit
+ - move student names to end of new list
+ - remove name/val from original list
+
+*/
+
+//create an empty sorted list
+
+var studentListSorted = [String]() // list of namez
+var studentRandomSorted = [Int]()
+
+//repeat while sorted list be empty
+
+
+while !studentList.isEmpty {
+    
+//find highest val in array
+    
+    var hvsf = -1
+    
+    var hvindex = -1
+    
+    for (index, value) in studentRandom.enumerate() {
+        
+        print("The index is \(index) and the val is \(value)")
+        
+        if value > hvsf {
+            hvsf = value
+            hvindex = index
+        }
+        
+    }
+    //take from LIST and put in NEW LIST OHH MYYY GODDDD
+    studentListSorted.append(studentList[hvindex])
+    studentRandomSorted.append(hvsf)
+    
+    //remove dem from dat unsorted list bruh
+    
+    studentList.removeAtIndex(hvindex)
+    studentRandom.removeAtIndex(hvindex)
+
+  }
+
+studentListSorted
+studentRandomSorted
