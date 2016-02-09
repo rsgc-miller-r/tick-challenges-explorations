@@ -59,20 +59,35 @@ repeat {
     }
     
     
-    var sped = Float(eyy!)
-    var spedlimit = Float(lmao!)
+    var sped = Float(lmao!)
+    var spedlimit = Float(eyy!)
     var overLimit = sped! - spedlimit!
+    var fine = 0
   
 if overLimit <= 20 {
     var fine = 100
+    if  spedlimit > sped {
+        print("\nYa done gud son, yar below the limit")
+    } else if sped > spedlimit {
+        print("\nWHOA son, slow down! Yer fine is $",fine,"!")
+    }
+} else if overLimit <= 30 && overLimit >= 21 {
+    var fine = 270
+    if  spedlimit > sped {
+        print("\nYa done gud son, yar below the limit")
+    } else if sped > spedlimit {
+        print("\nWHOA son, slow down! Yer fine is $",fine,"!")
+    }
+} else if overLimit >= 31 {
+    var fine = 500
+    if  spedlimit > sped {
+        print("\nYa done gud son, yar below the limit")
+    } else if sped > spedlimit {
+        print("\nWHOA son, slow down! Yer fine is $",fine,"!")
+    }
     }
 
-    
-if  spedlimit > sped {
-    print("\nYa done gud son, yar below the limit")
-} else if sped > spedlimit {
-    print("\nWHOA son, slow down! Yer fine is $"fine"!")
-    }
+
 
 
 
